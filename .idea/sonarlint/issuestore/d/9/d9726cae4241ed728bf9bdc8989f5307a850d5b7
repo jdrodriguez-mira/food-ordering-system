@@ -1,0 +1,7 @@
+
+
+java:S4165J"iRemove this useless assignment; "orderItemId" already holds the assigned value along all execution paths.(¢‰ðó
+U
+java:S1854J"?Remove this useless assignment to local variable "orderItemId".(¢‰ðó
+E
+java:S1656J"/Remove or correct this useless self-assignment.(¢‰ðó
