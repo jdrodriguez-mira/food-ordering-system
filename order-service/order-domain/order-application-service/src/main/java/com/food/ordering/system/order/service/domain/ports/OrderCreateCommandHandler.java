@@ -28,7 +28,7 @@ public class OrderCreateCommandHandler {
     public CreateOrderResponse createOrder(CreateOrderCommand createOrderCommand) {
         OrderCreatedEvent orderCreatedEvent = orderCreateHelper.createOrder(createOrderCommand);
         orderCreatedPaymentRequestMessagePublisher.publish(orderCreatedEvent);
-        return orderDataMapper.mapOrderToCreateOrderResponse(orderCreatedEvent.getOrder());
+        return orderDataMapper.mapOrderToCreateOrderResponse(orderCreatedEvent.getOrder(), "Order created successfully.");
     }
 
 }

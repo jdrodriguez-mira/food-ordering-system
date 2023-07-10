@@ -2,6 +2,7 @@ package com.food.ordering.system.order.service.domain.ports;
 
 import com.food.ordering.system.order.service.domain.OrderDomainService;
 import com.food.ordering.system.order.service.domain.dto.create.CreateOrderCommand;
+import com.food.ordering.system.order.service.domain.entity.Customer;
 import com.food.ordering.system.order.service.domain.entity.Order;
 import com.food.ordering.system.order.service.domain.entity.Restaurant;
 import com.food.ordering.system.order.service.domain.event.OrderCreatedEvent;
@@ -14,6 +15,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.Optional;
 import java.util.UUID;
 
 @Slf4j
@@ -53,12 +55,19 @@ public class OrderCreateHelper {
     }
 
     private Restaurant checkRestaurant(CreateOrderCommand createOrderCommand) {
-        return restaurantRepository.findRestaurant(orderDataMapper.createOrderCommandToRestaurant(createOrderCommand))
-                .orElseThrow(()-> new OrderDomainException("Restaurant does not exists"));
+        Restaurant restaurant = restaurantRepository.findRestaurant(orderDataMapper.createOrderCommandToRestaurant(createOrderCommand))
+                .orElseThrow(() -> new OrderDomainException("Restaurant does not exists"));
+        if (!restaurant.isActive()){
+            throw new OrderDomainException("Restaurant is not active.");
+        }
+        return restaurant;
     }
 
     private void checkCustomer(UUID customerId) {
-        log.warn("Customer with id: {} does not exists.", customerId.toString());
-        customerRepository.findById(customerId).orElseThrow(() -> new OrderDomainException("Customer does not exist"));
+        Optional<Customer> customer = customerRepository.findById(customerId);
+        if (customer.isEmpty()){
+            log.warn("Customer with id: {} does not exists.", customerId.toString());
+            throw new OrderDomainException("Customer does not exist");
+        }
     }
 }
