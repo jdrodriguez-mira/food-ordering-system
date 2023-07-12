@@ -63,8 +63,6 @@ lcommon/common-domain/src/main/java/com/food/ordering/system/domain/event/publis
 `common/common-domain/src/main/java/com/food/ordering/system/domain/valueobject/RestaurantId.java,e\f\efe8871378405af39290eb1bfae7f83a06f5bda9
 ¯
 order-service/order-domain/order-domain-core/src/main/java/com/food/ordering/system/order/service/domain/entity/Restaurant.java,4\1\41afe6700b13f3fde8c262dc1d9616e1db3f2984
-¬
-|order-service/order-domain/order-domain-core/src/main/java/com/food/ordering/system/order/service/domain/entity/Product.java,2\6\26dc01e756c8c6d8293ed991ac6c8db65da038b3
 ¸
 ‡order-service/order-domain/order-domain-core/src/main/java/com/food/ordering/system/order/service/domain/valueobject/StreetAddress.java,c\d\cd333fc65b1426be1aea7f1431aa36b076f405f0
 »
