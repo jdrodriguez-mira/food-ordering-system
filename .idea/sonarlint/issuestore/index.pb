@@ -25,8 +25,6 @@ Ycommon/common-domain/src/main/java/com/food/ordering/system/domain/valueobject/
 acommon/common-domain/src/main/java/com/food/ordering/system/domain/exception/DomainException.java,b\4\b40f054c34c72fa3e8336392a5cbde9134751ae1
 ¸
 ‡order-service/order-domain/order-domain-core/src/main/java/com/food/ordering/system/order/service/domain/event/OrderCancelledEvent.java,3\7\37e0a437f745d2bc15d89051facc84524d94ae7b
-³
-‚order-service/order-domain/order-domain-core/src/main/java/com/food/ordering/system/order/service/domain/event/OrderPaidEvent.java,3\f\3f763cd44c00aba58b610546e6496cf7d0df6c5c
 ®
 ~order-service/order-domain/order-domain-core/src/main/java/com/food/ordering/system/order/service/domain/event/OrderEvent.java,e\4\e4ee778e0dda8d79545384ea60c3b4a90f357351
 E

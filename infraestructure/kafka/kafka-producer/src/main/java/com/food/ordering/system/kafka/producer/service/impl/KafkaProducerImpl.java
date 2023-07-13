@@ -1,6 +1,6 @@
 package com.food.ordering.system.kafka.producer.service.impl;
 
-import com.food.ordering.system.kafka.producer.service.KafkaProducerInterface;
+import com.food.ordering.system.kafka.producer.service.KafkaProducer;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.avro.specific.SpecificRecordBase;
 import org.springframework.kafka.KafkaException;
@@ -16,7 +16,7 @@ import java.util.Objects;
 
 @Slf4j
 @Component
-public class KafkaProducerImpl<K extends Serializable, V extends SpecificRecordBase> implements KafkaProducerInterface<K,V> {
+public class KafkaProducerImpl<K extends Serializable, V extends SpecificRecordBase> implements KafkaProducer<K,V> {
 
     private final KafkaTemplate<K,V> kafkaTemplate;
 
