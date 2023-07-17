@@ -19,8 +19,6 @@ d
 „order-service/order-domain/order-domain-core/src/main/java/com/food/ordering/system/order/service/domain/valueobject/TrackingId.java,1\3\13ba4f4b8c35142f4294da375331db975e93099a
 ¶
 …order-service/order-domain/order-domain-core/src/main/java/com/food/ordering/system/order/service/domain/valueobject/OrderItemId.java,f\a\fac59ff09a81930eb45632670fe26f6465ec102f
-‰
-Ycommon/common-domain/src/main/java/com/food/ordering/system/domain/valueobject/Money.java,b\8\b8e27400dab2e49ca3b3b9925a174e77a45ae28f
 ‘
 acommon/common-domain/src/main/java/com/food/ordering/system/domain/exception/DomainException.java,b\4\b40f054c34c72fa3e8336392a5cbde9134751ae1
 ¸
