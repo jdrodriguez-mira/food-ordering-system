@@ -28,4 +28,5 @@ public abstract class PaymentEvent implements DomainEvent<Payment> {
     public List<String> getFailureMessages() {
         return failureMessages;
     }
+
 }
